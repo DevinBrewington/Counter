@@ -5,6 +5,9 @@ let count = 0;
 const value = document.querySelector("#value");
 const btns = document.querySelectorAll(".btn");
 
+const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+const buttons = document.querySelectorAll("button");
+ 
 btns.forEach(function (btn) {
 	btn.addEventListener('click', function (e) {
 	   const styles = e.currentTarget.classList;
@@ -28,4 +31,10 @@ btns.forEach(function (btn) {
 	   }
 	   value.textContent = count;
 	});
+	
+buttons.forEach(button => {
+	button.addEventListener("click", () => {
+		audio.play();
+	   })
+    })
 });
